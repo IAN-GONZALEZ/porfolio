@@ -1,0 +1,81 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-top: 5vh;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    padding: 20px;
+    border-radius: 3px;
+    width: 90vw; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;  /* espacio entre la imagen y el nombre */
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+.profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 5vh;
+    width: 90vw;
+}
+
+.post {
+    width: calc(33.33% - 20px);
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-name {
+        text-align: center;
+    }
+
+    .posts {
+        width: 100vw;
+    }
+
+    .post {
+        width: calc(50% - 20px);  /* Haciendo que solo haya 2 posts por fila */
+    }
+}
+

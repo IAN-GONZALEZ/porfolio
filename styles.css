@@ -1,0 +1,159 @@
+/* Configuración global para el cuerpo y el HTML */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Color de fondo similar al de Netflix */
+    color: white; /* Color de texto */
+}
+
+/* Contenedor principal */
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 400vh; /* Altura equivalente a 400 veces la altura de la ventana */
+}
+
+/* Estilo para cada página */
+.page {
+    height: 100vh; /* Cada página ocupa el 100% de la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente los contenidos */
+    align-items: center; /* Centra horizontalmente los contenidos */
+    text-align: center; /* Alineación de texto al centro */
+    background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Estilos para el menú (sin cambios) */
+#menu {
+    position: fixed;
+    top: 50%;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(-50%);
+}
+
+
+/* Estilos para los botones del menú (sin cambios) */
+#menu button {
+    margin: 10px 0;
+    padding: 10px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+    transform: scale(1.7);
+}
+
+/* Estilos al pasar el mouse por encima de los botones del menú (sin cambios) */
+#menu button:hover {
+    background: none;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+/* PAGINA DE BIENVEBENIDA */
+#page1 p {
+    color:#ffffff;
+    font-weight: bold;
+}
+#page1 h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 4px 10px;
+    color: #ffffff; /* Texto en blanco */
+}
+#page1 h3 {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 4px 10px;
+    color: #ffffff; /* Texto en blanco */
+}
+
+#page1 span {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 4px 10px;
+    color: #f9f509; /* Texto en blanco */
+    
+}
+/* Animación de entrada para elementos dentro de los <span> */
+span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s ease forwards, repeatAnimation 2s ease infinite;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes repeatAnimation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* PAGINA DE PROYECTO NUMERO 1 */
+#page2 h2 {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 4px 10px;
+    color: #f9f509; /* Texto en blanco */
+}
+#page2 p {
+    margin-right: 90px;
+    margin-left: 90px;
+    color: #ffffff; /* Texto en blanco */
+}
+
+#page2 a {
+    color: #f9f509; /* Texto en blanco */
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Estilos para dispositivos pequeños (teléfonos) (sin cambios) */
+@media (max-width: 600px) {
+    #menu button {
+        padding: 5px 10px;
+        font-size: 0.8em;
+        transform: scale(1.7);
+    }
+}
+
+/* Estilos para dispositivos medianos (tabletas) (sin cambios) */
+@media (min-width: 600px) and (max-width: 1200px) {
+    #menu button {
+        padding: 8px 15px;
+        font-size: 1em;
+        transform: scale(1.5);
+    }
+}
+
+/* Estilos para dispositivos grandes (computadoras) (sin cambios) */
+@media (min-width: 1200px) {
+    #menu button {
+        padding: 10px 20px;
+        font-size: 1.2em;
+        transform: scale(1.7);
+    }
+}
